@@ -1,0 +1,25 @@
+{
+  "name": "av-automatron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env test_env=staging npx playwright test",
+    "run-de": "cross-env test_env=${environment_name} ENV_NAME=DE npx playwright test --project=de ${scope}",
+    "run-uk": "cross-env test_env=${environment_name} ENV_NAME=UK npx playwright test --project=uk ${scope}",
+    "execute-all": "concurrently ${runCountries}"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.30.0",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "jwt-decode": "^3.1.2",
+    "playwright": "^1.30.0"
+  }
+}
